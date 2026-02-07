@@ -147,7 +147,7 @@ class Minimax:
             
             # Alpha-beta pruning
             alpha = max(alpha, best_score)
-            if best_score == self.WIN:
+            if beta <= alpha:
                 break
         
         if best_move is None:
